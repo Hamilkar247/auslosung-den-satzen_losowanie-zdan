@@ -26,12 +26,14 @@ def auslosung_den_satzen(name_datei):
     for satze in inhalt.split('\n\n'):
         tafel.append(satze)
     #auslosung
+    number = 0
     while True:
+        number = number + 1
         anzahl_den_satzen = len(tafel)
         if anzahl_den_satzen == 0:
             break
         ziehl=random.randint(0, anzahl_den_satzen-1)
-        print(tafel[ziehl])
+        print(str(number)+":"+tafel[ziehl])
         del tafel[ziehl]
 
 def main():
